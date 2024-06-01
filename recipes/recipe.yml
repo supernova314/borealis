@@ -49,7 +49,7 @@ modules:
       # - org.gnome.eog
   - type: script
     snippets:
-      - "ln -s /usr/lib/opt/Mullvad\ VPN /opt/Mullvad\ VPN"
+      - "ln -s /usr/lib/opt/Mullvad\\ VPN /opt/Mullvad\\ VPN"
   - type: systemd
     system:
       enabled:
