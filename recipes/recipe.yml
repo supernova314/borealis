@@ -14,9 +14,6 @@ modules:
     files:
       - usr: /usr
       - etc: /etc
-      # - var: /var # copies config/files/usr into your image's /usr.
-                  # put configuration files you want in /etc/ on a booted system 
-                  # in /usr/etc/ in the image. read more in files module reference.
 
   - type: rpm-ostree
     repos:
@@ -54,12 +51,6 @@ modules:
       # Installing different branches of the same Flatpak is not supported.
       remove:
       # - org.gnome.eog
-  - type: script
-    snippets:
-      - "ln -s /usr/lib/opt/Mullvad\\ VPN /var/opt/Mullvad\\ VPN"
-  - type: files
-    files:
-      - var: /var
   - type: systemd
     system:
       enabled:
