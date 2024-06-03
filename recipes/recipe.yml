@@ -51,9 +51,6 @@ modules:
       # Installing different branches of the same Flatpak is not supported.
       remove:
       # - org.gnome.eog
-  - type: files
-    files:
-      - usr/lib: /usr/lib
   - type: systemd
     system:
       enabled:
