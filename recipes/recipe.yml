@@ -23,10 +23,14 @@ modules:
     repos:
       - https://repository.mullvad.net/rpm/stable/mullvad.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+      - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+      - https://raw.githubusercontent.com/ublue-os/bluefin/main/system_files/dx/etc/yum.repos.d/vscode.repo
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
+      - code
       - mullvad-vpn
       - tailscale
+      - brave-browser
       # - micro
       # - starship
     remove:
