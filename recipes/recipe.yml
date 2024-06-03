@@ -18,6 +18,9 @@ modules:
     files:
       - usr: /usr
       - etc: /etc
+  - type: script
+    snippets:
+      - "curl https://brave-browser-rpm-release.s3.brave.com/brave-core.asc > /etc/pki/rpm-gpg/brave-core.asc"
 
   - type: rpm-ostree
     repos:
@@ -40,6 +43,7 @@ modules:
       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
     optfix:
       - Mullvad VPN
+      - brave.com
   - type: bling
     install:
       - 1password
