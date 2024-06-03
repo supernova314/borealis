@@ -14,7 +14,7 @@ modules:
     files:
       - usr: /usr
       - etc: /etc
-      - var: /var # copies config/files/usr into your image's /usr.
+      # - var: /var # copies config/files/usr into your image's /usr.
                   # put configuration files you want in /etc/ on a booted system 
                   # in /usr/etc/ in the image. read more in files module reference.
 
@@ -56,7 +56,10 @@ modules:
       # - org.gnome.eog
   - type: script
     snippets:
-      - "ln -s /usr/lib/opt/Mullvad\\ VPN /opt/Mullvad\\ VPN"
+      - "ln -s /usr/lib/opt/Mullvad\\ VPN /var/opt/Mullvad\\ VPN"
+  - type: files
+    files:
+      - var: /var
   - type: systemd
     system:
       enabled:
