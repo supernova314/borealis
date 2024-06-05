@@ -35,6 +35,8 @@ modules:
       - mullvad-vpn
       - tailscale
       - brave-browser
+      - xeyes
+      - @virtualization
       # - micro
       # - starship
     remove:
