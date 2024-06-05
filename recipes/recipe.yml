@@ -36,7 +36,6 @@ modules:
       - tailscale
       - brave-browser
       - xeyes
-      - @virtualization
       # - micro
       # - starship
     remove:
