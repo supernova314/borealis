@@ -36,6 +36,7 @@ modules:
       - tailscale
       - brave-browser
       - xeyes
+      - gnome-themes-extra
       # - micro
       # - starship
     remove:
