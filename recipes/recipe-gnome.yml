@@ -49,6 +49,10 @@ modules:
   - type: bling
     install:
       - 1password
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
