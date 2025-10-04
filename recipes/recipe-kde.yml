@@ -27,12 +27,13 @@ modules:
         - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
         - https://downloads.1password.com/linux/keys/1password.asc
     install:
-      - code
-      - sublime-text
-      - tailscale
-      - xeyes
-      - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
-      - 1password
+      packages:
+        - code
+        - sublime-text
+        - tailscale
+        - xeyes
+        - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
+        - 1password
    
   # - type: bling
   #   install:
