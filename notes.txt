@@ -1,0 +1,1 @@
+1. autorefresh doesn't work in local repo
