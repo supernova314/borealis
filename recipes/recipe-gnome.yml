@@ -1,11 +1,14 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+#
 # image will be published to ghcr.io/<user>/<name>
 name: australis
 # description will be included in the image's metadata
-description:  Aurora bluebuild with some extra packages 
+description: Aurora bluebuild with some extra packages
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-nvidia
-image-version: 42 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/silverblue-main
+image-version: 43 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -21,6 +24,7 @@ modules:
         - vscode.repo
         - 1password.repo
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+        - https://raw.githubusercontent.com/terrapkg/subatomic-repos/main/terra.repo
       keys:
         - https://packages.microsoft.com/keys/microsoft.asc
         - https://download.sublimetext.com/sublimehq-rpm-pub.gpg
@@ -34,7 +38,7 @@ modules:
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
         - gnome-themes-extra
         - 1password
-      
+        - zed
 
   # - type: bling
   #   install:
@@ -42,12 +46,11 @@ modules:
   - type: fonts
     fonts:
       nerd-fonts:
-        - FiraCode 
-  
+        - FiraCode
+
   - type: systemd
     system:
       enabled:
         - tailscaled
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
-
