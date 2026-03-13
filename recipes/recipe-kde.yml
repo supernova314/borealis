@@ -33,6 +33,7 @@ modules:
     install:
       packages:
         - code
+        - chromium
         - sublime-text
         - tailscale
         - xeyes
